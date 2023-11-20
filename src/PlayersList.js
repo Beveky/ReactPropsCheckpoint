@@ -1,19 +1,12 @@
 import React from "react";
-import Player from "./Player";
 import playersData from "./players";
+import PlayerCard from "./Player";
 
 const PlayersList = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: "200px",
-      }}
-    >
+    <div>
       {playersData.map((player, index) => (
-        <Player key={index} {...player} />
+        <PlayerCard Key={index} {...player} />
       ))}
     </div>
   );
