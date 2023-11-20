@@ -1,8 +1,7 @@
 import React from "react";
-import Player from "./Player";
-import playersData from "./players";
+import MovieCard from "./MovieCard";
 
-const PlayersList = () => {
+const MoviesList = ({ data }) => {
   return (
     <div
       style={{
@@ -12,11 +11,11 @@ const PlayersList = () => {
         gap: "200px",
       }}
     >
-      {playersData.map((player, index) => (
-        <Player key={index} {...player} />
+      {data.map((el, index) => (
+        <MovieCard key={index} movieInfo={el} />
       ))}
     </div>
   );
 };
 
-export default PlayersList;
+export default MoviesList;

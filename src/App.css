@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Open+Sans:wght@600&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
   margin: 0;
   padding: auto;
@@ -16,14 +18,17 @@ code {
 
 .App {
   text-align: center;
+  background-image: url("/public/bg.png");
 
-  background-color: #002b36;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
 }
 
 .buttons-container {
   display: flex;
   justify-content: center;
+
   margin-top: 20px;
 }
 
@@ -46,4 +51,17 @@ p {
 }
 .title {
   color: aliceblue;
+}
+
+.custom-navbar {
+  background-color: #101010;
+}
+.custon-button {
+  background-color: #b0060f;
+}
+.card {
+  background-color: blue;
+}
+.Caed :hover {
+  width: 20rem;
 }

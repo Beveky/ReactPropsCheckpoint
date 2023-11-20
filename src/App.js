@@ -1,24 +1,26 @@
-import React from "react";
-import PlayersList from "./PlayersList";
+import React, { useState } from "react";
+import MoviesList from "./components/MoviesList";
+import MoviesData from "./components/Movies";
+import Nav from "./components/Nav";
+import AddMovie from "./components/AddMovie";
 
 function App() {
+  const [movies, setMovies] = useState(MoviesData);
+  const handleSearch = (searchQuery) => {
+    const filteredMovies = MoviesData.filter((movie) =>
+      movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setMovies(filteredMovies);
+  };
+
   return (
     <div className="App">
+      <Nav handleSearch={handleSearch} />
       <br />
       <br />
       <br />
-      <h1 className="title">FIFA player cards</h1>
-      <hr
-        style={{
-          margin: "20px 0",
-          border: "none",
-          borderBottom: "1px solid #ccc",
-        }}
-      />
-      <br />
-      <br />
-      <br />
-      <PlayersList />
+      <MoviesList data={movies} />
+      <AddMovie movies={movies} setMovies={setMovies} />
     </div>
   );
 }
